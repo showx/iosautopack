@@ -28,8 +28,8 @@ echo phone:$debug_phone_real;
 if [ -n "$1" ] && [ -n "$2" ];then
 	echo "------------start";
 	if [ -e $debug_sim ] && [ -e $debug_phone ];then
-		echo exist;
 		lipo -create $debug_phone_real $debug_sim_real -output $debug_phone_real
+		cp -rf $debug_phone /code/tmp/framework/$framename
 	fi
 else
 	echo "请输入参数";
