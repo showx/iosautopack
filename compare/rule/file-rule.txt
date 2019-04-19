@@ -1,0 +1,3 @@
+option stop-on-error
+option confirm:no-to-all
+file-report layout:summary options:display-all output-to:%3 %1 %2

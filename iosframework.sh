@@ -5,19 +5,28 @@
 #lipo -create 真机路径 模拟器路径 -output 真机路径
 
 echo shell路径：$0;
-echo 地址:$1;
-echo 名称:$2;
-echo 内容:$3;
+echo 地址:$1; #project
+echo 名称:$2; #framework
+echo 内容:$3; #sdk
 
 
 #"happySDK.framework/happySDK"
+
+#  /Users/用户/Library/Developer/Xcode/DerivedData
+
+# 这里需要自行配置
+real_path="/Users/pengyongsheng/Library/Developer/Xcode/DerivedData/";
+product_path="/Build/Products/";
 path=$1
 framename=$2
 #path=$0
 content=$3
 #/Users/pengyongsheng/Library/Developer/Xcode/DerivedData/happySDK-gmugxwnehiiywsbzyoonndtqxzvj/Build/Products/
-debug_sim=$path/Debug-iphonesimulator/$framename;
-debug_phone=$path/Debug-iphoneos/$framename;
+rpath=$real_path$path$product_path;
+
+debug_sim=$rpath/Debug-iphonesimulator/$framename;
+debug_phone=$rpath/Debug-iphoneos/$framename;
+
 debug_sim_real=$debug_sim/$content;
 debug_phone_real=$debug_phone/$content;
 

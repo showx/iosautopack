@@ -1,0 +1,4 @@
+compare binary
+option stop-on-error
+option confirm:no-to-all
+hex-report layout:summary options:display-all output-to:%3 %1 %2 

@@ -1,0 +1,8 @@
+load "%1" "%2"
+select all
+filter "-.svn\"
+expand all
+compare rules-based
+select all
+folder-report layout:summary title:比较 output-to:"%3" output-options:html-color
+#aaa

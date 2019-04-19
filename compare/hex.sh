@@ -6,8 +6,6 @@
 
 # echo $1;
 
-#封装成函数，每每对比
-
 # #解压数据
 
 if [[  "$1" == "ipaunzip" ]];then 
@@ -111,7 +109,7 @@ function test()
 {
 	echo $FOLDER_B;
 }
-FOLDER_A=/code/test/compare/;
+FOLDER_A=/code/y/iosautopack/compare/;
 FOLDER_B=$FOLDER_A"/Payload/";
 echo "根目录:"$FOLDER_A;
 echo "对比目录:"$FOLDER_B;
